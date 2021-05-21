@@ -1,7 +1,13 @@
 {
   "name": "fresh-angular",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
+    "setup:dev": "yarn install",
+    "setup:build": "yarn install --prod",
+    "reset": "rimraf ./node_modules ./.dist ./coverage",
+    "reset:dev": "yarn reset && yarn setup:dev",
+    "reset:build": "yarn reset && yarn setup:build",
+    "upgrade:dev": "rimraf ./yarn.lock && yarn reset:dev",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -11,10 +17,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.0.0",
+    "@angular/cdk": "12.0.1",
     "@angular/common": "~12.0.0",
     "@angular/compiler": "~12.0.0",
     "@angular/core": "~12.0.0",
     "@angular/forms": "~12.0.0",
+    "@angular/material": "12.0.1",
     "@angular/platform-browser": "~12.0.0",
     "@angular/platform-browser-dynamic": "~12.0.0",
     "@angular/router": "~12.0.0",
