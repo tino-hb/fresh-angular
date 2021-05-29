@@ -5,7 +5,7 @@
 // Plus imports for other components in your app.
 
 // Custom styles package
-@import '~src/styles/package';
+@import 'styles/package';
 
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
@@ -19,7 +19,7 @@ $fresh-angular-typography: mat.define-typography-config(
 @include mat.core($fresh-angular-typography);
 
 // Theme resets
-@import '~src/styles/themes/theme.reset';
+@import 'styles/themes/theme.reset';
 
 @mixin custom-components-theme($theme) {
   @include fresh-angular-styles-reset-theme($theme);
